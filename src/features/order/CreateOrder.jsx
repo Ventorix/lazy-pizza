@@ -44,7 +44,7 @@ function CreateOrder() {
   const cart = fakeCart;
 
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-6 xl:mt-36">
       <h2 className="mb-8 text-xl font-bold">Ready to order? Let's go!</h2>
 
       {/* <Form method='POST' action='/order/new'> */}

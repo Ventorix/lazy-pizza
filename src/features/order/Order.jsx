@@ -42,7 +42,7 @@ function Order() {
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-300 px-6 py-5">
+      <div className="flex flex-wrap items-center justify-between gap-2 rounded-md bg-stone-300 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
@@ -58,7 +58,7 @@ function Order() {
           <OrderItem item={item} key={item.id} />
         ))}
       </ul>
-      <div className="space-y-2 bg-stone-300 px-6 py-5">
+      <div className="space-y-2 rounded-md bg-stone-300 px-6 py-5">
         <p className="text=stone-600 text-sm font-medium">
           Price pizza: {formatCurrency(orderPrice)}
         </p>
