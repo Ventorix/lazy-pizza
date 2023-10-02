@@ -28,7 +28,7 @@ function Order() {
   return (
     <div className="space-y-8 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text=xl font-semibold">Order #{id} status</h2>
+        <h2 className="text=xl font-semibold">Order number {id} status</h2>
 
         <div className="space-x-2">
           {priority && (
@@ -54,8 +54,8 @@ function Order() {
       </div>
 
       <ul className="mt-3 divide-y-2 divide-stone-400 border-b-2 border-t-2 border-stone-400">
-        {cart.map((item) => (
-          <OrderItem item={item} key={item.id} />
+        {cart.map((item, index) => (
+          <OrderItem item={item} key={index} />
         ))}
       </ul>
       <div className="space-y-2 rounded-md bg-stone-300 px-6 py-5">
