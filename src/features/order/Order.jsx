@@ -9,10 +9,10 @@ import {
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
+import UpdateOrderButton from "./UpdateOrderButton";
 
 function Order() {
   const order = useLoaderData();
-
   const fetcher = useFetcher();
 
   useEffect(
@@ -93,6 +93,8 @@ function Order() {
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+
+      {!priority && <UpdateOrderButton order={order} />}
     </div>
   );
 }
