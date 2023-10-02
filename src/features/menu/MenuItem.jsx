@@ -23,6 +23,7 @@ function MenuItem({ pizza }) {
 
     dispatch(addItem(newItem));
   }
+
   return (
     <li className="flex items-center gap-4 py-2">
       <img
@@ -32,11 +33,13 @@ function MenuItem({ pizza }) {
           soldOut ? "opacity-75 grayscale" : ""
         }`}
       />
+
       <div className="mt-0.5 flex grow flex-col">
         <p className="font-medium">{name}</p>
         <p className="text-sm capitalize italic text-stone-500">
           {ingredients.join(", ")}
         </p>
+
         <div className="mt-2 flex  items-center justify-between gap-2 sm:mt-4">
           {!soldOut ? (
             <p className="text-sm">{formatCurrency(unitPrice)}</p>
@@ -45,6 +48,7 @@ function MenuItem({ pizza }) {
               Sold out
             </p>
           )}
+
           {isInCart && (
             <div className="flex  items-center gap-3 sm:gap-8">
               <UpdateQuantityItem
@@ -54,6 +58,7 @@ function MenuItem({ pizza }) {
               <DeleteItemButton pizzaId={id}>Delete</DeleteItemButton>
             </div>
           )}
+
           {!soldOut && !isInCart && (
             <Button type="small" onClick={handleAddToCart}>
               Add to cart
