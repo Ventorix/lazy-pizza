@@ -14,7 +14,7 @@ function UpdateQuantityItem({ pizzaId, currentQuantity }) {
         -
       </Button>
 
-      <span className="text-md font-semibold xl:text-xl">
+      <span className={"text-md min-w-[20px] text-center font-semibold"}>
         {currentQuantity}
       </span>
 
